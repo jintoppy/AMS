@@ -5,7 +5,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
-
+import {MatTableModule} from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { AuditListComponent } from './components/audit-list/audit-list.component
 import { AuditDetailsComponent } from './components/audit-details/audit-details.component';
 import { EditAuditComponent } from './components/edit-audit/edit-audit.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-
+import {AuditService} from './audit.service';
 
 @NgModule({
   declarations: [
@@ -36,9 +36,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatIconModule,
     MatCardModule,
     MatChipsModule,
+    MatTableModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuditService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

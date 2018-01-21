@@ -1,6 +1,7 @@
-<app-header></app-header>
+<app-header (onMenuChange)="onAppMenuItemChange($event)"></app-header>
 <div class="content-area">
-  <app-dashboard></app-dashboard>  
+  <app-dashboard *ngIf="activeView === 'dashboard'"></app-dashboard>  
+  <app-audit-list *ngIf="activeView === 'auditList'"></app-audit-list>
 </div>
 <app-footer></app-footer>
 

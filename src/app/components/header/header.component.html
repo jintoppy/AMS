@@ -5,6 +5,19 @@
         Audit Manager
       </span>
       <span class="spacer"></span>
+      <span>
+          <mat-chip-list>
+              <mat-chip 
+                  (click)="onMenuClick(menu)" 
+                  *ngFor="let menu of menuList" 
+                  selected="true" 
+                  color="accent"
+                >
+                {{menu.displayName}}
+              </mat-chip>
+          </mat-chip-list>
+      </span>
+      <span class="spacer"></span>
       <span>Hi User</span>
     </mat-toolbar-row>
 </mat-toolbar>
