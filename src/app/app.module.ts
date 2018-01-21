@@ -7,6 +7,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatTableModule} from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -37,6 +38,7 @@ import {AuditService} from './audit.service';
     MatCardModule,
     MatChipsModule,
     MatTableModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [

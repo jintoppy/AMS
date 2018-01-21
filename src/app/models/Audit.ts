@@ -6,5 +6,7 @@ export class Audit {
         public id: number,
         public category: Category,
         public auditArea: string
-    ){}
+    ){
+        
+    }
 }
