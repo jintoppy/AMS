@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'App';
+  myDate = 1516604428422;
   activeView: string;
   onAppMenuItemChange(menuName){
     this.activeView = menuName;

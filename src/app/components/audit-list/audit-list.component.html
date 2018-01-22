@@ -5,6 +5,8 @@
         <th>Name</th>
         <th>Category</th>
         <th>Audit Area</th>
+        <th>View</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +20,12 @@
         <td>
           {{item.auditArea}}
         </td>
+        <td>
+          <a [routerLink]="['/auditdetails', item.id]">View Details</a>
+        </td>
+        <td>
+            <a [routerLink]="['/editaudit', item.id]">Edit</a>
+          </td>
       </tr>
     </tbody>
     

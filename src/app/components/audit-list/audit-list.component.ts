@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuditService} from '../../audit.service';
 import {Audit} from '../../models/Audit';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-audit-list',
@@ -12,7 +13,12 @@ export class AuditListComponent implements OnInit {
   constructor(private service: AuditService) { }
 
   ngOnInit() {
-    this.audits = this.service.getAudits();
+    const auditsObservable = this.service.getAudits();
+    auditsObservable.subscribe((res) => {
+      this.audits = res;
+    }, (err : HttpErrorResponse) => {
+      console.log(err);
+    });
   }
 
 }

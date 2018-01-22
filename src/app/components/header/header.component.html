@@ -5,17 +5,11 @@
         Audit Manager
       </span>
       <span class="spacer"></span>
+      <span>Total Audits are {{auditCount}}</span>
       <span>
-          <mat-chip-list>
-              <mat-chip 
-                  (click)="onMenuClick(menu)" 
-                  *ngFor="let menu of menuList" 
-                  selected="true" 
-                  color="accent"
-                >
+          <a [routerLink]="menu.name" *ngFor="let menu of menuList">
                 {{menu.displayName}}
-              </mat-chip>
-          </mat-chip-list>
+          </a>
       </span>
       <span class="spacer"></span>
       <span>Hi User</span>

@@ -8,6 +8,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatTableModule} from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -18,6 +19,8 @@ import { AuditDetailsComponent } from './components/audit-details/audit-details.
 import { EditAuditComponent } from './components/edit-audit/edit-audit.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {AuditService} from './audit.service';
+import { AlertDirective } from './alert.directive';
+import { GreetingPipe } from './greeting.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import {AuditService} from './audit.service';
     AuditListComponent,
     AuditDetailsComponent,
     EditAuditComponent,
-    DashboardComponent
+    DashboardComponent,
+    AlertDirective,
+    GreetingPipe
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,8 @@ import {AuditService} from './audit.service';
     MatChipsModule,
     MatTableModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [

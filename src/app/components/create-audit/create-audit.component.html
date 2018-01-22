@@ -1,3 +1,17 @@
-<p>
-  create-audit works!
-</p>
+<h2>Create Audit</h2>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Audit Name</label>
+      <input #myAuditName="ngModel" name="auditName" type="text" ngModel required>
+      <span *ngIf="myAuditName.errors && myAuditName.errors.required">
+        This field is required
+      </span>
+      
+  </div>
+  <div>
+      <label for="">Area Name</label>
+      <input name="area" type="text" ngModel>
+  </div>
+  
+  <input type="submit">
+</form>
